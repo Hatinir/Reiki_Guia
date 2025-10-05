@@ -93,6 +93,7 @@ i {
     margin-left: 15px;
     font-size: 20px;
     line-height: 1.6;
+    text-align: center;
 }
 
 
@@ -108,6 +109,13 @@ i {
 
 /* Responsive Design */
 @media (max-width: 600px) {
+  .nav_links {
+    margin-right: 20px;
+    margin-top: 20px;
+    float: none;
+    text-align: center;
+  }
+
   #container_question {
     flex-direction: column;
     align-items: center;
