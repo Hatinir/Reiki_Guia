@@ -17,7 +17,7 @@ span {
 .banner_div {
     width: 100%;
     height: 100px;
-    background: linear-gradient(#663a4b 10%, #00000000 90%);
+    background: linear-gradient(#663a4b 10%, #e2c8d2 90%);
 }
 
 
@@ -51,121 +51,30 @@ i {
     margin-right: 8px;
 }
 
-/* Main Section */
+/* Main */
 
-/* Question Zone - Main Section */
+/* Body | Main */
 
-#container_question {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    max-width: 800px;
-    flex-direction: row;
+body {
+    background-color: #e2c8d2;
 }
 
-#question {
-    line-height: 1.4;
-    font-size: 25px;
-    flex: 1;
-}
+/* Home Section | Main */
 
-#image_question {
-    height: 200px;
-    border: 5px solid #663a4b;
-    width: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-}
-
-/* Option Message - Main Section */
-
-#option_message {
+#title {
     text-align: center;
-    font-size: 28px;
     margin-top: 20px;
+    font-size: 50px;
+    font-family: "Itim", cursive;
 }
 
-/* Explication - Main Section */
+.title_spans {
+    font-size: 60px;
+}
 
-#explication {
-    margin-top: 30px;
-    margin-left: 15px;
-    font-size: 20px;
-    line-height: 1.6;
+#sub-title {
     text-align: center;
-}
-
-
-/* ---------PELIGRO---------- */
-
-/*|--------------------------|*/
-/*| ATENCION | SECCION MEDIA |*/
-/*| TENER CUIDADO AL MODIFI- |*/
-/*| CAR ESTA SECCION, MUCHAS |*/
-/*| GRACIAS!!! ATTE: SEBA ☻  |*/
-/*|--------------------------|*/
-
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .nav_links {
-    margin-right: 20px;
-    margin-top: 20px;
-    float: none;
-    text-align: center;
-  }
-
-  #container_question {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  #image_question {
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-
-  #question {
-    font-size: 20px;
-    padding: 0 10px;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 1199px) {
-  #container_question {
-    padding: 30px;
-    gap: 30px;
-  }
-
-  #image_question {
-    width: 220px;
-    height: 220px;
-    margin-right: 20px;
-  }
-
-  #question {
-    font-size: 24px;
-    line-height: 1.5;
-  }
-}
-
-@media (min-width: 1200px) {
-  #container_question {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px;
-    gap: 40px;
-  }
-
-  #question {
     font-size: 30px;
-    line-height: 1.6;
-  }
-
-  #image_question {
-    width: 250px;
-    height: 250px;
-  }
+    margin-top: 10px;
+    font-family: "Itim", cursive;
 }
