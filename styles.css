@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
     font-family: "Ubuntu", sans-serif;
 }
 
@@ -10,6 +11,7 @@ span {
     color: #663a4b;
     font-family: "Itim", cursive;
     font-size: 30px;
+    text-decoration: justify;
 }
 
 /* Banner */
@@ -18,6 +20,8 @@ span {
     width: 100%;
     height: 100px;
     background: linear-gradient(#663a4b 10%, #e2c8d2 90%);
+    position: relative;
+    top: -20px;
 }
 
 
@@ -59,22 +63,123 @@ body {
     background-color: #e2c8d2;
 }
 
-/* Home Section | Main */
+/* Home | Main */
 
 #title {
+    margin: 0 20px 0 20px;
     text-align: center;
     margin-top: 20px;
     font-size: 50px;
+    font-weight: bold;
     font-family: "Itim", cursive;
 }
 
 .title_spans {
     font-size: 60px;
+    text-decoration: justify;
 }
 
-#sub-title {
+#sub_title {
+    font-weight: bold;
     text-align: center;
     font-size: 30px;
-    margin-top: 10px;
     font-family: "Itim", cursive;
+}
+
+/* About Us | Main */
+
+#about_title {
+    padding-top: 35vh;
+    font-family: "Itim", cursive;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+#about_text {
+    padding-left: 40px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+/* Reiki Description Section | Main */
+
+#reiki_description_section {
+    margin-top: 10vh;
+    text-align: center;
+    background-color: #663a4b;
+}
+
+.span_light {
+    color: #e2c8d2;
+}
+
+#description_title {
+    font-family: "Itim", cursive;
+    padding-top: 20px;
+}
+
+/*|---------------|*/
+/*| PRECAUCION!!! |*/
+/*| MEDIA SECTION |*/
+/*|---------------|*/
+
+@media (max-width: 600px) {
+    #title {
+        font-size: 35px;
+    }
+
+    .title_spans {
+        font-size: 45px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .nav_buttons {
+        font-size: 15px;
+    }
+
+    span {
+        font-size: 25px;
+    }
+
+    #about_title {
+        font-size: 25px;
+    }
+
+    #about_text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #title {
+        font-size: 70px;
+        padding-top: 20px;
+    }
+
+    .title_spans {
+        font-size: 80px;
+    }
+
+    #sub_title {
+        font-size: 40px;
+    }
+
+    span {
+        font-size: 40px;
+    }
+
+    #about_title {
+        font-size: 40px;
+    }
+
+    #about_text {
+        font-size: 25px;
+    }
 }
