@@ -14,31 +14,60 @@
 <body>
     <header>
         <nav>
+            <div id="inicio"></div>
             <img class="logo" src="./images/logo.png" alt="Guia Reiki">
             <ul class="nav_links">
                 <a class="nav_buttons" href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a>
-                <a class="nav_buttons" href="#guia"><i class="fa-solid fa-address-card"></i>Sobre Nosotros</a>
+                <a class="nav_buttons" href="#sobre_nosotros"><i class="fa-solid fa-address-card"></i>Sobre Nosotros</a>
                 <a class="nav_buttons" href="#contacto"><i class="fa-solid fa-envelope"></i>Contacto</a>
             </ul>
         </nav>
     </header>
     <main>
         <div class="banner_div"></div>
-        <section id="home_section">
+        <section id="home">
             <p id="title"><span class="title_spans">Relajate</span> y <span class="title_spans">Calmate</span> con el <span class="title_spans">Reiki</span>,</p>
             <p id="sub_title">Eso podras hacer en <span>*Nombre*</span></p>
+            <a id="button_contact" href="#contacto"><span class="span_light">¡Contactanos!</span></a>
         </section>
 
-        <section id="about_us_section">
+        <section id="sobre_nosotros">
             <h1 id="about_title"><span>*Nombre*</span> es:</h1>
             <p id="about_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, eveniet repudiandae ipsa blanditiis maiores consectetur quasi ab voluptatem, commodi odit, quaerat provident omnis qui aliquam eius excepturi iusto! Voluptatem, dolorum.</p>
         </section>
 
         <section id="reiki_description_section">
-            <h2 id="description_title">¿Que es el <span class="span_light">Reiki</span>?</h2>
+            <h2 id="description_title">¿Que es el <span class="span_light_title">Reiki</span>?</h2>
+            <div id="div_mikao">
+                <p class="description_p">El <span class="span_light">Reiki</span> es una <span class="span_light">práctica espiritual japonesa</span> creada por <span class="span_light">"Mikao Usui" en 1922</span>, que busca canalizar energía vital <span class="span_light">a través de las manos</span> para promover el <span class="span_light">bienestar físico, emocional y espiritual</span>. <span class="span_light">Mikao</span> desarolló esta tecnica tras una <span class="span_light">profunda experiencia de meditacion</span> en el <span class="span_light">monte Kurama</span></p>
+                <img id="mikao_usui" src="./images/mikao_usui.webp" alt="Mikao Usui, creador del Reiki">
+            </div>
+            <p class="description_p"><span class="span_light">Reiki</span> significa <span class="span_light">"Energía vital guiada espiritualmente"</span>, porque al juntar <span class="span_light">Rei</span> y <span class="span_light">Ki</span>, se forma <span class="span_light">Reiki</span>, que se traduce a ese significado porque:</p>
+            <p class="description_significados"><span class="span_light">Rei</span> significa: <span class="span_light">"Energía universal"</span> y</p>
+            <p class="description_significados"><span class="span_light">Ki</span> significa: <span class="span_light">"Energía vital que fluye en todos los seres vivos"</span>.</p>
         </section>
 
-        <section id="contact_section"></section>
+        <section id="contacto">
+            <h2 id="contact_title"><span>Contacto</span></h2>
+            <form id="contact_form" action="https://formsubmit.co/tu-email-aqui" method="POST">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre" required>
+                </div>
+                <div>
+                    <label for="email">Correo Electronico:</label>
+                    <input id="email_form" type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                </div>
+                <div>
+                    <textarea id="message_form" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje aqui..." required></textarea>
+                </div>
+                <button id="submit_button" type="submit">Enviar</button>
+                <button id="reset_button" type="reset">Limpiar</button>
+            </form>
+        </section>
     </main>
 </body>
 </html>

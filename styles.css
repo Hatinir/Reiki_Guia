@@ -65,6 +65,11 @@ body {
 
 /* Home | Main */
 
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
 #title {
     margin: 0 20px 0 20px;
     text-align: center;
@@ -86,10 +91,22 @@ body {
     font-family: "Itim", cursive;
 }
 
+#button_contact {
+    align-self: center;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #663a4b;
+    text-decoration: none;
+    font-family: "Itim", cursive;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
 /* About Us | Main */
 
 #about_title {
-    padding-top: 35vh;
+    padding-top: 50vh;
     font-family: "Itim", cursive;
     font-size: 30px;
     padding-left: 20px;
@@ -104,18 +121,102 @@ body {
 /* Reiki Description Section | Main */
 
 #reiki_description_section {
-    margin-top: 10vh;
+    padding: 10px;
+    margin-top: 30vh;
     text-align: center;
     background-color: #663a4b;
 }
 
+.span_light_title {
+    color: #e2c8d2;
+}
+
 .span_light {
     color: #e2c8d2;
+    font-size: 25px;
 }
 
 #description_title {
     font-family: "Itim", cursive;
     padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.description_p {
+    font-size: 20px;
+    flex: 1;
+    padding: 10px 0 10px 20px;
+    font-weight: 500px;
+    text-align: justify;
+    margin: 0 20px 20px 20px;
+}
+
+#div_mikao {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#mikao_usui {
+    width: 140px;
+    margin-right: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+}
+
+.description_significados {
+    font-size: 20px;
+    padding: 0 0 0 20px;
+    font-weight: 500px;
+    text-align: justify;
+    font-weight: 500px;
+    margin: 0 20px 20px 20px;
+}
+
+/* Contact */
+
+#contact_title {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+form {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-family: "Itim", cursive;
+    color: #663a4b;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 300px;
+    max-width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Itam", cursive;
+    color: #663a4b;
+}
+
+button {
+    background-color: #663a4b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: "Itim", cursive;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /*|---------------|*/
@@ -123,7 +224,7 @@ body {
 /*| MEDIA SECTION |*/
 /*|---------------|*/
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #title {
         font-size: 35px;
     }
@@ -155,6 +256,21 @@ body {
     #about_text {
         font-size: 18px;
     }
+
+    #div_mikao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #mikao_usui {
+        width: 50%;
+        max-width: 300px;
+    }
+
+    .description_p {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -181,5 +297,22 @@ body {
 
     #about_text {
         font-size: 25px;
+    }
+
+    #description_title {
+        font-size: 35px;
+    }
+
+    .description_p {
+        font-size: 25px;
+        flex: 1;
+    }
+
+    .description_significados {
+        font-size: 25px;
+    }
+
+    .span_light {
+        font-size: 30px;
     }
 }
