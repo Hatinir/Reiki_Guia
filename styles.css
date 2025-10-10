@@ -161,7 +161,7 @@ body {
 #mikao_usui {
     width: 140px;
     margin-right: 20px;
-    border: 2px solid #000;
+    border: 3px solid #e2c8d2;
     border-radius: 10px;
     height: auto;
     object-fit: cover;
@@ -217,6 +217,26 @@ button {
     font-family: "Itim", cursive;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+#title_map {
+    font-size: 25px;
+    text-align: center;
+}
+
+#map_container {
+    float: right;
+    background-color: #663a4b;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#map {
+    width: 350px;
+    height: 300px;
+    margin: 3px;
+    border: none;
+    border-radius: 10px;
 }
 
 /*|---------------|*/

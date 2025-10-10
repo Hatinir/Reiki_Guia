@@ -47,26 +47,39 @@
             <p class="description_significados"><span class="span_light">Ki</span> significa: <span class="span_light">"Energía vital que fluye en todos los seres vivos"</span>.</p>
         </section>
 
+        <h2 id="contact_title"><span>Contacto</span></h2>
         <section id="contacto">
-            <h2 id="contact_title"><span>Contacto</span></h2>
-            <form id="contact_form" action="https://formsubmit.co/tu-email-aqui" method="POST">
-                <div>
-                    <label for="nombre">Nombre:</label>
-                    <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre" required>
+            <div>
+                <div id="map_container">
+                    <h2 id="title_map"><span class="span_light">Nuestra Ubicacion:</span></h2>
+                    <iframe
+                        id="map" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.0584126198426!2d-58.49186749543287!3d-34.598252779949554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1760111167061!5m2!1ses-419!2sar" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <div>
-                    <label for="email">Correo Electronico:</label>
-                    <input id="email_form" type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
-                </div>
-                <div>
-                    <label for="mensaje">Mensaje:</label>
-                </div>
-                <div>
-                    <textarea id="message_form" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje aqui..." required></textarea>
-                </div>
-                <button id="submit_button" type="submit">Enviar</button>
-                <button id="reset_button" type="reset">Limpiar</button>
-            </form>
+
+                <form id="contact_form" action="https://formsubmit.co/tu-email-aqui" method="POST">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo Electronico:</label>
+                        <input id="email_form" type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                    </div>
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                    </div>
+                    <div>
+                        <textarea id="message_form" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje aqui..." required></textarea>
+                    </div>
+                    <button id="submit_button" type="submit">Enviar</button>
+                    <button id="reset_button" type="reset">Limpiar</button>
+                </form>
+            </div>
         </section>
     </main>
 </body>
