@@ -16,7 +16,8 @@ span {
 
 /* Banner */
 
-.banner_div {
+#banner_div {
+    display: none;
     width: 100%;
     height: 100px;
     background: linear-gradient(#663a4b 10%, #e2c8d2 90%);
@@ -33,7 +34,16 @@ span {
 /* Nav Bar */
 
 nav {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #663a4b;
+}
+
+#navbar.visible {
+  opacity: 1;
 }
 
 .nav_links {
@@ -57,9 +67,51 @@ i {
 
 /* Main */
 
+/* Loading Screen */
+
+#pantalla-carga {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #e2c8d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.contenedor-loader {
+  text-align: center;
+  animation: aparecer 2s ease-out;
+}
+
+.logo-loader {
+  width: 200px;
+}
+
+.frase-loader {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #663a4b;
+  font-family: "Itim", cursive;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Body | Main */
 
 body {
+    padding-top: 153px;
     background-color: #e2c8d2;
 }
 
@@ -204,7 +256,7 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    font-family: "Itam", cursive;
+    font-family: "Itim", cursive;
     color: #663a4b;
 }
 
@@ -231,6 +283,13 @@ button {
     margin-right: 10px;
 }
 
+#map_container_bottom {
+    background-color: #663a4b;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: none;
+}
+
 #map {
     width: 350px;
     height: 300px;
@@ -239,12 +298,39 @@ button {
     border-radius: 10px;
 }
 
+/* Footer */
+
+footer {
+    background-color: #663a4b;
+    color: white;
+    padding: 10px;
+}
+
+.footer_text {
+    font-family: "Itim", cursive;
+    font-size: 20px;
+}
+
+.footer_link {
+    font-family: "Itim", cursive;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: white;
+}
+
+#map_footer {
+    font-family: "Itim", cursive;
+    list-style: none;
+    margin-top: 10px;
+}
+
+
 /*|---------------|*/
 /*| PRECAUCION!!! |*/
 /*| MEDIA SECTION |*/
 /*|---------------|*/
 
-@media (max-width: 768px) {
+@media (max-width: 740px) {
     #title {
         font-size: 35px;
     }
@@ -291,6 +377,15 @@ button {
     .description_p {
         font-size: 20px;
     }
+
+    #map_container {
+        display: none;
+    }
+
+    #map_container_bottom {
+        align-self: center;
+        display: inline-block;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -335,4 +430,100 @@ button {
     .span_light {
         font-size: 30px;
     }
+
+    #contact_title {
+        font-size: 40px;
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    input, textarea {
+        font-size: 20px;
+        width: 400px;
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    #map {
+        width: 430px;
+        height: 380px;
+    }
+
+    #map_container {
+        margin-right: 50px;
+    }
+}
+
+/*|---------------|*/
+/*| PRECAUCION!!! |*/
+/*|   KEYFRAMES   |*/
+/*|---------------|*/
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+#title {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: title_show 1.5s ease-out forwards;
+}
+
+#sub_title {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: title_show 2s ease-out forwards;
+}
+
+#button_contact {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: title_show 2.5s ease-out forwards;
+}
+
+@keyframes title_show {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img, #map_container, #map_container_bottom, iframe, #title_map, input, label, textarea, button, span {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 20% cover 25%;
+    animation-fill-mode: both;
+}
+
+nav.scrolled {
+    background-color: #663a4bb9;
+}
+
+/* Webkits */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #663a4b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e2c8d2;
+    border-radius: 0 5px 0 5px;
 }
