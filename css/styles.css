@@ -228,6 +228,15 @@ body {
     margin: 0 20px 20px 20px;
 }
 
+#description_more {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #e2c8d2;
+    text-decoration: underline;
+    font-family: "Itim", cursive;
+}
+
 /* Contact */
 
 #contact_title {
