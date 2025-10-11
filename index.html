@@ -6,11 +6,8 @@
     <title>Guia Reiki</title>
     <script src="https://kit.fontawesome.com/775046d95c.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div id="pantalla-carga">
@@ -35,12 +32,12 @@
         <section id="home">
             <p id="title"><span class="title_spans">Relajate</span> y <span class="title_spans">Calmate</span> con el <span class="title_spans">Reiki</span>,</p>
             <p id="sub_title">Eso podras hacer en <span>*Nombre*</span></p>
-            <a id="button_contact" href="#contacto"><span class="span_light">¡Contactanos!</span></a>
+            <a id="button_contact" href="#contacto"><span class="span_light"><i class="fa-solid fa-envelope"></i>¡Contactanos!</span></a>
         </section>
 
         <section id="sobre_nosotros">
             <h1 id="about_title"><span>*Nombre*</span> es:</h1>
-            <p id="about_text">un <span>consultorio de Reiki</span> donde nos eforzamos para darte la <span>mejor calidad posible</span></p>
+            <p class="about_text">un <span>consultorio de Reiki</span> donde nos eforzamos día a día para darte la <span>mejor calidad posible</span> en las <span>sesiones</span>. <p class="about_text"><span>Antes</span> de las sesiones <span>preparamos el ambiente</span> del consultorio para que tu <span>experiencia</span> sea <span>relajante y comoda</span></p></p>
         </section>
 
         <section id="reiki_description_section">
@@ -58,7 +55,7 @@
         <section id="contacto">
             <div>
                 <div id="map_container">
-                    <h2 id="title_map"><span class="span_light">Nuestra Ubicacion:</span></h2>
+                    <h2 id="title_map"><span class="span_light"><i class="fa-solid fa-location-dot"></i>Nuestra Ubicacion:</span></h2>
                     <iframe
                         id="map" 
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.0584126198426!2d-58.49186749543287!3d-34.598252779949554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1760111167061!5m2!1ses-419!2sar" 
@@ -70,25 +67,25 @@
 
                 <form id="contact_form" action="https://formsubmit.co/tu-email-aqui" method="POST">
                     <div>
-                        <label for="nombre">Nombre:</label>
+                        <label for="nombre"><i class="fa-solid fa-user"></i>Nombre:</label>
                         <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre" required>
                     </div>
                     <div>
-                        <label for="email">Correo Electronico:</label>
+                        <label for="email"><i class="fa-solid fa-envelope"></i>Correo Electronico:</label>
                         <input id="email_form" type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
                     </div>
                     <div>
-                        <label for="mensaje">Mensaje:</label>
+                        <label for="mensaje"><i class="fa-solid fa-message"></i>Mensaje:</label>
                     </div>
                     <div>
                         <textarea id="message_form" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje aqui..." required></textarea>
                     </div>
-                    <button id="submit_button" type="submit">Enviar</button>
-                    <button id="reset_button" type="reset">Limpiar</button>
+                    <button id="submit_button" type="submit"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
+                    <button id="reset_button" type="reset"><i class="fa-solid fa-trash"></i>Limpiar</button>
                 </form>
 
                 <div id="map_container_bottom">
-                    <h2 id="title_map"><span class="span_light">Nuestra Ubicacion:</span></h2>
+                    <h2 id="title_map"><span class="span_light"><i class="fa-solid fa-location-dot"></i>Nuestra Ubicacion:</span></h2>
                     <iframe
                         id="map" 
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.0584126198426!2d-58.49186749543287!3d-34.598252779949554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1760111167061!5m2!1ses-419!2sar" 
