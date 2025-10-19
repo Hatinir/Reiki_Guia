@@ -11,7 +11,7 @@
     <meta name="language" content="Spanish">
     <meta name="revisit-after" content="7 days">
     <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Tu Bienestar</title>
     <script src="https://kit.fontawesome.com/775046d95c.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/logo.png">
@@ -61,10 +61,9 @@
             <p class="description_significados"><span class="span_light">Ki</span> significa: <span class="span_light">"Energía vital que fluye en todos los seres vivos"</span>.</p>
         </section>
 
-        <h2 id="redy_text">¿Estas listo para <span>una sesion</span>?</h2>
-        <h3 id="contact_us"><span>Entonces contactanos a continuacion:</span></h3>
-        <h2 id="contact_title"><span>Contacto</span></h2>
         <section id="contacto">
+            <h2 id="redy_text">¿Estas listo para <span>una sesion</span>?</h2>
+            <h3 id="contact_us"><span>Entonces contactanos a continuacion:</span></h3>
             <div>
                 <div id="map_container">
                     <h2 id="title_map"><span class="span_light"><i class="fa-solid fa-location-dot"></i>Nuestra Ubicacion:</span></h2>
@@ -80,11 +79,15 @@
                 <form id="contact_form" action="https://formsubmit.co/naliamoni72@gmail.com" method="POST">
                     <div>
                         <label for="nombre"><i class="fa-solid fa-user"></i>Nombre: <span title="Campo Obligatorio" class="obligatory">*</span></label>
-                        <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre">
+                        <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre y Apellido">
                     </div>
                     <div>
                         <label for="email"><i class="fa-solid fa-envelope"></i>Correo Electronico: <span title="Campo Obligatorio" class="obligatory">*</span></label>
-                        <input id="email_form" type="text" name="email" placeholder="ejemplo@ejemplo.com">
+                        <input id="email_form" type="text" name="email" placeholder="ej. ejemplo@ejemplo.com">
+                    </div>
+                    <div>
+                        <label for="telefono"><i class="fa-solid fa-phone"></i>Teléfono:</label>
+                        <input id="telephone_form" type="text" name="telefono" placeholder="ej. +54 011 1234-5678">
                     </div>
                     <div>
                         <label for="mensaje"><i class="fa-solid fa-message"></i>Mensaje: <span title="Campo Obligatorio" class="obligatory">*</span></label>
@@ -95,7 +98,6 @@
 
                     <div id="errores_formulario" class="mensaje-error"></div>
 
-                    <input type="hidden" name="_next" value="./contactaste">
                     <input type="hidden" name="_captcha" value="false">
                     <button id="submit_button" type="submit"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
                     <button id="reset_button" type="reset"><i class="fa-solid fa-trash"></i>Limpiar</button>

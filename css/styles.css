@@ -359,6 +359,7 @@ button {
     padding-top: 5px;
     border-radius: 10px;
     margin-right: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #map_container_bottom {
@@ -367,6 +368,19 @@ button {
     border-radius: 10px;
     margin-right: 10px;
     display: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#map_container:hover {
+    background-color: #744758;
+    transform: scale(1.01);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+#map_container_bottom:hover {
+    background-color: #744758;
+    transform: scale(1.01);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 #map {
