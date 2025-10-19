@@ -27,8 +27,13 @@ span {
 
 
 .logo {
-    height: 130px;
+    margin-top: 20px;
+    height: 100px;
     margin-left: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 /* Header */
@@ -73,6 +78,10 @@ ul {
     font-family: "Itim", cursive;
     font-size: 18px;
     margin: 20px;
+}
+
+.nav_buttons:hover {
+    color: #e2c8d2;
 }
 
 i {
@@ -175,6 +184,10 @@ body {
     font-size: 20px;
     border-radius: 5px;
     border: 1px solid #000;
+}
+
+#button_contact:hover {
+    background-color: #6b3f50;
 }
 
 /* About Us | Main */
@@ -309,6 +322,7 @@ input, textarea {
     font-size: 16px;
     font-family: "Itim", cursive;
     color: #663a4b;
+    margin-top: 5px;
 }
 
 textarea {
@@ -320,16 +334,24 @@ textarea {
     transition: all 0.3s ease;
 }
 
+input:hover, textarea:hover {
+    transform: scale(1.02);
+}
+
 
 button {
+    border: 1px solid #000;
     background-color: #663a4b;
     color: white;
-    border: none;
     padding: 10px 20px;
     font-size: 18px;
     font-family: "Itim", cursive;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #6b3f50;
 }
 
 .mensaje-error {
@@ -621,7 +643,7 @@ footer {
     }
 }
 
-img, i, #map_container, #map_container_bottom, iframe, #title_map, input, label, textarea, button, span {
+img, i, span {
     view-timeline-name: --image;
     view-timeline-axis: block;
 
