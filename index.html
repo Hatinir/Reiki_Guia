@@ -3,47 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Reiki</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Tu Bienestar">
+    <meta name="description" content="Tu Bienestar es un consultorio de Reiki donde ofrecemos sesiones de alta calidad para tu bienestar físico, emocional y espiritual.">
+    <meta name="keywords" content="Reiki, Bienestar, Sesiones de Reiki, Consultorio de Reiki, Salud Holística, Energía Vital, Relajación, Terapia Alternativa">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Tu Bienestar</title>
     <script src="https://kit.fontawesome.com/775046d95c.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <div id="inicio"></div>
     <div id="pantalla-carga">
         <div class="contenedor-loader">
-        <img src="./images/logo.png" alt="Logo Reiki" class="logo-loader">
-        <p class="frase-loader">Respirá profundo... estás entrando en armonía</p>
+            <img src="./images/logo.png" alt="Logo Reiki" class="logo-loader">
+            <p class="frase-loader">Respirá profundo... estás entrando en armonía</p>
+        </div>
     </div>
-</div>
-    <div id="inicio"></div>
     <header>
         <nav id="navbar">
             <img class="logo" src="./images/logo.png" alt="Guia Reiki">
             <ul class="nav_links">
-                <a class="nav_buttons" href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a>
-                <a class="nav_buttons" href="#sobre_nosotros"><i class="fa-solid fa-address-card"></i>Sobre Nosotros</a>
-                <a class="nav_buttons" href="#contacto"><i class="fa-solid fa-envelope"></i>Contacto</a>
+                <li><a class="nav_buttons" href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a class="nav_buttons" href="#sobre_nosotros"><i class="fa-solid fa-address-card"></i>Sobre Nosotros</a></li>
+                <li><a class="nav_buttons" href="#contacto"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
             </ul>
-
-            <button id="side_bar"><i class="fa-solid fa-bars"></i></button>
-
         </nav>
     </header>
     <main>
         <div id="banner_div"></div>
+
         <section id="home">
             <p id="title"><span class="title_spans">Relajate</span> y <span class="title_spans">Calmate</span> con el <span class="title_spans">Reiki</span>,</p>
-            <p id="sub_title">Eso podras hacer en <span>*Nombre*</span></p>
+            <p id="sub_title">Eso podras hacer en <span>Tu Bienestar</span></p>
             <a id="button_contact" href="#contacto"><span class="span_light"><i class="fa-solid fa-envelope"></i>¡Contactanos!</span></a>
         </section>
 
         <section id="sobre_nosotros">
-            <h1 id="about_title"><span>*Nombre*</span> es:</h1>
+            <h1 id="about_title"><span>Tu Bienestar</span> es:</h1>
             <p class="about_text">un <span>consultorio de Reiki</span> donde nos eforzamos día a día para darte la <span>mejor calidad posible</span> en las <span>sesiones</span>. <p class="about_text"><span>Antes</span> de las sesiones <span>preparamos el ambiente</span> del consultorio para que tu <span>experiencia</span> sea <span>relajante y comoda</span></p></p>
         </section>
 
-        <section id="reiki_description_section">
+        <section id="reiki_description_section" class="scroll-animado">
             <h2 id="description_title">¿Que es el <span class="span_light_title">Reiki</span>?</h2>
             <div id="div_mikao">
                 <p class="description_p">El <span class="span_light">Reiki</span> es una <span class="span_light">práctica espiritual japonesa</span> creada por <span class="span_light">"Mikao Usui" en 1922</span>, que busca canalizar energía vital <span class="span_light">a través de las manos</span> para promover el <span class="span_light">bienestar físico, emocional y espiritual</span>. <span class="span_light">Mikao</span> desarolló esta tecnica tras una <span class="span_light">profunda experiencia de meditacion</span> en el <span class="span_light">monte Kurama</span></p>
@@ -52,13 +59,9 @@
             <p class="description_p"><span class="span_light">Reiki</span> significa <span class="span_light">"Energía vital guiada espiritualmente"</span>, porque al juntar <span class="span_light">Rei</span> y <span class="span_light">Ki</span>, se forma <span class="span_light">Reiki</span>, que se traduce a ese significado porque:</p>
             <p class="description_significados"><span class="span_light">Rei</span> significa: <span class="span_light">"Energía universal"</span> y</p>
             <p class="description_significados"><span class="span_light">Ki</span> significa: <span class="span_light">"Energía vital que fluye en todos los seres vivos"</span>.</p>
-<<<<<<< HEAD
-=======
-            <a id="description_more" href="/el-reiki/">Leer más..</a>
->>>>>>> 69263a225c8185b2ab94d43e2948384dc50eb653
         </section>
 
-        <h2 id="redy_text">¿Estas listo para <span>una sesion</span> de <span>Reiki</span>?</h2>
+        <h2 id="redy_text">¿Estas listo para <span>una sesion</span>?</h2>
         <h3 id="contact_us"><span>Entonces contactanos a continuacion:</span></h3>
         <h2 id="contact_title"><span>Contacto</span></h2>
         <section id="contacto">
@@ -76,19 +79,23 @@
 
                 <form id="contact_form" action="https://formsubmit.co/naliamoni72@gmail.com" method="POST">
                     <div>
-                        <label for="nombre"><i class="fa-solid fa-user"></i>Nombre:</label>
-                        <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre" required>
+                        <label for="nombre"><i class="fa-solid fa-user"></i>Nombre: <span title="Campo Obligatorio" class="obligatory">*</span></label>
+                        <input id="name_form" type="text" name="nombre" minlength="3" placeholder="Nombre">
                     </div>
                     <div>
-                        <label for="email"><i class="fa-solid fa-envelope"></i>Correo Electronico:</label>
-                        <input id="email_form" type="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                        <label for="email"><i class="fa-solid fa-envelope"></i>Correo Electronico: <span title="Campo Obligatorio" class="obligatory">*</span></label>
+                        <input id="email_form" type="text" name="email" placeholder="ejemplo@ejemplo.com">
                     </div>
                     <div>
-                        <label for="mensaje"><i class="fa-solid fa-message"></i>Mensaje:</label>
+                        <label for="mensaje"><i class="fa-solid fa-message"></i>Mensaje: <span title="Campo Obligatorio" class="obligatory">*</span></label>
                     </div>
                     <div>
-                        <textarea id="message_form" name="mensaje" rows="5" minlength="10" placeholder="Escribe tu mensaje aqui..." required></textarea>
+                        <textarea id="message_form" name="mensaje" rows="5" placeholder="Escribe tu mensaje aqui..."></textarea>
                     </div>
+
+                    <div id="errores_formulario" class="mensaje-error"></div>
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contactaste.html">
                     <input type="hidden" name="_captcha" value="false">
                     <button id="submit_button" type="submit"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
                     <button id="reset_button" type="reset"><i class="fa-solid fa-trash"></i>Limpiar</button>
@@ -107,7 +114,7 @@
             </div>
         </section>
         <footer>
-            <p class="footer_text">*Nombre*</p>
+            <p class="footer_text">Tu Bienestar</p>
             <ul id="footer_links">
                 <li id="map_footer">Mapa del sitio:</li>
                 <li><a class="footer_link" href="#inicio">Inicio</a></li>
@@ -165,6 +172,75 @@
         const navbar = document.getElementById('navbar');
         navbar.classList.add('visible');
         document.getElementById('banner_div').style.display = 'block';
+    });
+
+    const elementosAnimables = document.querySelectorAll('.scroll-animado');
+
+    const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    elementosAnimables.forEach(el => observer.observe(el));
+
+    document.getElementById('contact_form').addEventListener('submit', function(e) {
+        const nombre = document.getElementById('name_form');
+        const email = document.getElementById('email_form');
+        const mensaje = document.getElementById('message_form');
+        const erroresDiv = document.getElementById('errores_formulario');
+
+        let errores = [];
+
+        if (nombre.value.trim().length < 3) {
+            errores.push("El nombre debe tener al menos 3 caracteres.");
+            nombre.style.border = "2px solid red";
+        }
+
+        if (email.value.trim() === "") {
+            errores.push("El correo electrónico es obligatorio.");
+            email.style.border = "2px solid red";
+        } 
+        else {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value.trim())) {
+                errores.push("El correo electrónico no es válido.");
+                email.style.border = "2px solid red";
+            }
+        }
+
+        if (mensaje.value.trim().length < 10) {
+            errores.push("El mensaje debe tener al menos 10 caracteres.");
+            mensaje.style.border = "2px solid red";
+        }
+
+        if (errores.length > 0) {
+            e.preventDefault();
+            erroresDiv.innerHTML = errores.map(e => `<p><span class="error">• ${e} </span></p>`).join("");
+            erroresDiv.style.opacity = "1";
+
+            setTimeout(() => {
+                erroresDiv.style.opacity = "0";
+                nombre.style.border = "2px solid #663a4b";
+                email.style.border = "2px solid #663a4b";
+                mensaje.style.border = "2px solid #663a4b";
+            }, 7000);
+
+            setTimeout(() => {
+                erroresDiv.innerHTML = "";
+            }, 7500);
+        
+        } else {
+            nombre.style.border = "2px solid #663a4b";
+            email.style.border = "2px solid #663a4b";
+            mensaje.style.border = "2px solid #663a4b";
+            erroresDiv.innerHTML = "";
+            erroresDiv.style.opacity = "0";
+        }
     });
 </script>
 
