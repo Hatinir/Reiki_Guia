@@ -66,7 +66,7 @@
             <h3 id="contact_us"><span>Entonces contactanos a continuacion:</span></h3>
             <div>
                 <div id="map_container">
-                    <h2 id="title_map"><span class="span_light"><i class="fa-solid fa-location-dot"></i>Nuestra Ubicacion:</span></h2>
+                    <h2 id="title_map"><span class="span_light">Nuestros Datos:</span></h2>
                     <iframe
                         id="map" 
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d821.0584126198426!2d-58.49186749543287!3d-34.598252779949554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1760111167061!5m2!1ses-419!2sar" 
@@ -74,6 +74,10 @@
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+
+                    <p class="contact_texts"><i class="fa-solid fa-location-dot"></i>Calle 1234, Municipio, Provincia.</p>
+                    <p class="contact_texts"><i class="fa-solid fa-phone"></i>+54 011 1234-5678</p>
+                    <p class="contact_texts"><i class="fa-solid fa-envelope"></i>ejemplo@ejemplo.com</p>
                 </div>
 
                 <form id="contact_form" action="https://formsubmit.co/naliamoni72@gmail.com" method="POST">
@@ -117,134 +121,33 @@
             </div>
         </section>
         <footer>
-            <p class="footer_text">Tu Bienestar</p>
-            <ul id="footer_links">
-                <li id="map_footer">Mapa del sitio:</li>
-                <li><a class="footer_link" href="#inicio">Inicio</a></li>
-                <li><a class="footer_link" href="#sobre_nosotros">Sobre Nosotros</a></li>
-                <li><a class="footer_link" href="#reiki_description_section">¿Que es el reiki?</a></li>
-                <li><a class="footer_link" href="#contacto">Contacto</a></li>
-            </ul>
+            <div>
+                <p class="footer_text">Tu Bienestar</p>
+                <ul id="footer_links">
+                    <li id="map_footer">Mapa del sitio:</li>
+                    <li><a class="footer_link" href="#inicio">Inicio</a></li>
+                    <li><a class="footer_link" href="#sobre_nosotros">Sobre Nosotros</a></li>
+                    <li><a class="footer_link" href="#reiki_description_section">¿Que es el reiki?</a></li>
+                    <li><a class="footer_link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul id="footer_other">
+                    <li><a class="footer_link" href="./privacidad.html">Politica de privacidad</a></li>
+                </ul>
+            </div>
     </main>
+
+    <!-- Cookies -->
+
+    <div id="cookie-banner" class="cookie-banner">
+        <img src="./images/cookies.webp" alt="Cookies">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas su uso. <a href="./privacidad.html">Politica de privacidad</a></p>
+        <button id="accept-cookies">Aceptar</button>
+    </div>
 </body>
 
-<script>
-    function scrollLento(destino, duracion = 1000) {
-    const inicio = window.pageYOffset;
-    const final = destino.getBoundingClientRect().top + inicio;
-    const distancia = final - inicio;
-    let inicioTiempo = null;
-
-    function animarScroll(tiempoActual) {
-        if (!inicioTiempo) inicioTiempo = tiempoActual;
-        const tiempoPasado = tiempoActual - inicioTiempo;
-        const progreso = Math.min(tiempoPasado / duracion, 1);
-        window.scrollTo(0, inicio + distancia * progreso);
-        if (progreso < 1) requestAnimationFrame(animarScroll);
-    }
-
-    requestAnimationFrame(animarScroll);
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(enlace => {
-    enlace.addEventListener('click', function (e) {
-        e.preventDefault();
-        const destino = document.querySelector(this.getAttribute('href'));
-        scrollLento(destino, 200);
-    });
-    });
-
-    window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    });
-
-    window.addEventListener('load', () => {
-        const loader = document.getElementById('pantalla-carga');
-        loader.style.opacity = '0';
-        setTimeout(() => {
-        loader.style.display = 'none';
-        }, 500);
-    });
-
-    window.addEventListener('load', () => {
-        const navbar = document.getElementById('navbar');
-        navbar.classList.add('visible');
-        document.getElementById('banner_div').style.display = 'block';
-    });
-
-    const elementosAnimables = document.querySelectorAll('.scroll-animado');
-
-    const observer = new IntersectionObserver((entradas) => {
-        entradas.forEach(entrada => {
-            if (entrada.isIntersecting) {
-                entrada.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    elementosAnimables.forEach(el => observer.observe(el));
-
-    document.getElementById('contact_form').addEventListener('submit', function(e) {
-        const nombre = document.getElementById('name_form');
-        const email = document.getElementById('email_form');
-        const mensaje = document.getElementById('message_form');
-        const erroresDiv = document.getElementById('errores_formulario');
-
-        let errores = [];
-
-        if (nombre.value.trim().length < 3) {
-            errores.push("El nombre debe tener al menos 3 caracteres.");
-            nombre.style.border = "2px solid red";
-        }
-
-        if (email.value.trim() === "") {
-            errores.push("El correo electrónico es obligatorio.");
-            email.style.border = "2px solid red";
-        } 
-        else {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email.value.trim())) {
-                errores.push("El correo electrónico no es válido.");
-                email.style.border = "2px solid red";
-            }
-        }
-
-        if (mensaje.value.trim().length < 10) {
-            errores.push("El mensaje debe tener al menos 10 caracteres.");
-            mensaje.style.border = "2px solid red";
-        }
-
-        if (errores.length > 0) {
-            e.preventDefault();
-            erroresDiv.innerHTML = errores.map(e => `<p><span class="error">• ${e} </span></p>`).join("");
-            erroresDiv.style.opacity = "1";
-
-            setTimeout(() => {
-                erroresDiv.style.opacity = "0";
-                nombre.style.border = "2px solid #663a4b";
-                email.style.border = "2px solid #663a4b";
-                mensaje.style.border = "2px solid #663a4b";
-            }, 7000);
-
-            setTimeout(() => {
-                erroresDiv.innerHTML = "";
-            }, 7500);
-        
-        } else {
-            nombre.style.border = "2px solid #663a4b";
-            email.style.border = "2px solid #663a4b";
-            mensaje.style.border = "2px solid #663a4b";
-            erroresDiv.innerHTML = "";
-            erroresDiv.style.opacity = "0";
-        }
-    });
-</script>
+<script src="./script.js"></script>
 
 </html>

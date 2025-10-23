@@ -139,6 +139,63 @@ main.animando-resize {
     }
 }
 
+/* Cookies | Main */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #e2c8d2;
+  color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Itim", cursive;
+  font-weight: 500;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cookie-banner img {
+    width: 60px;
+    margin-right: 5px;
+}
+
+.cookie-banner a {
+    color: #663a4b;
+    font-family: "Itim", cursive;
+    font-weight: bold;
+}
+
+.cookie-banner button {
+  background-color: #663a4b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+
+
 /* Body | Main */
 
 body {
@@ -384,6 +441,14 @@ button:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.contact_texts {
+    color: #e2c8d2;
+    font-family: "Itim", cursive;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 #map_container_bottom {
     background-color: #663a4b;
     padding-top: 5px;
@@ -416,6 +481,8 @@ button:hover {
 /* Footer */
 
 footer {
+    display: flex;
+    gap: 40px;
     background-color: #663a4b;
     color: white;
     padding: 10px;
@@ -441,6 +508,12 @@ footer {
     font-family: "Itim", cursive;
     list-style: none;
     margin-top: 10px;
+}
+
+#footer_other {
+    font-family: "Itim", cursive;
+    list-style: none;
+    margin-top: 35px;
 }
 
 
