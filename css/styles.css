@@ -504,16 +504,10 @@ footer {
     color: white;
 }
 
-#map_footer {
-    font-family: "Itim", cursive;
-    list-style: none;
-    margin-top: 10px;
-}
-
 #footer_other {
     font-family: "Itim", cursive;
     list-style: none;
-    margin-top: 35px;
+    margin-top: 10px;
 }
 
 
@@ -534,6 +528,10 @@ footer {
 }
 
 @media (max-width: 650px) {
+    body {
+        padding-top: 220px;
+    }
+
     #title {
         font-size: 35px;
     }
@@ -550,15 +548,11 @@ footer {
     nav {
         padding-bottom: 20px;
         align-items: center;
+        justify-content: center;
     }
 
     .nav_buttons {
         font-size: 15px;
-    }
-
-    ul {
-        margin: 0;
-        flex-direction: column;
     }
 
     span {
