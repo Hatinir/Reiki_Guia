@@ -60,10 +60,13 @@ function scrollLento(destino, duracion = 1000) {
 
     elementosAnimables.forEach(el => observer.observe(el));
 
+    const acceptBtn = document.getElementById('accept-cookies');
+
     document.getElementById('contact_form').addEventListener('submit', function(e) {
         const nombre = document.getElementById('name_form');
         const email = document.getElementById('email_form');
         const mensaje = document.getElementById('message_form');
+        const cookiesDiv = document.getElementById('cookie-banner');
         const erroresDiv = document.getElementById('errores_formulario');
 
         let errores = [];
@@ -90,6 +93,12 @@ function scrollLento(destino, duracion = 1000) {
             mensaje.style.border = "2px solid red";
         }
 
+        if (!localStorage.getItem('cookiesAccepted')) {
+            errores.push("Para contactarnos debes aceptar las cookies.");
+            cookiesDiv.style.border = "2px solid red";
+            acceptBtn.style.border = "2px solid red";
+        }
+
         if (errores.length > 0) {
             e.preventDefault();
             erroresDiv.innerHTML = errores.map(e => `<p><span class="error">• ${e} </span></p>`).join("");
@@ -100,6 +109,8 @@ function scrollLento(destino, duracion = 1000) {
                 nombre.style.border = "2px solid #663a4b";
                 email.style.border = "2px solid #663a4b";
                 mensaje.style.border = "2px solid #663a4b";
+                cookiesDiv.style.border = "none";
+                acceptBtn.style.border = "none";
             }, 7000);
 
             setTimeout(() => {
@@ -116,7 +127,6 @@ function scrollLento(destino, duracion = 1000) {
     });
 
     const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
 
     if (!localStorage.getItem('cookiesAccepted')) {
         banner.style.display = 'flex';
@@ -131,10 +141,6 @@ function scrollLento(destino, duracion = 1000) {
         banner.style.display = 'flex'; // Mostrar cartel
     } else {
         banner.style.display = 'none'; // Ocultar si ya aceptó
-    }
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-        banner.style.display = 'flex';
     }
 
     acceptBtn.addEventListener('click', () => {

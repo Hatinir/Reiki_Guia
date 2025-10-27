@@ -142,21 +142,21 @@ main.animando-resize {
 /* Cookies | Main */
 
 .cookie-banner {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: #e2c8d2;
-  color: #333;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Itim", cursive;
-  font-weight: 500;
-  animation: fadeIn 1s ease-in-out;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #e2c8d2;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .cookie-banner img {
@@ -171,27 +171,31 @@ main.animando-resize {
 }
 
 .cookie-banner button {
-  background-color: #663a4b;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  margin-right: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #663a4b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-banner:hover {
+    transform: scale(1.01);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(20px); }
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
 }
 
 .fade-out {
-  animation: fadeOut 0.8s ease forwards;
+    animation: fadeOut 0.8s ease forwards;
 }
 
 
